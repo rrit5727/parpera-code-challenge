@@ -31,3 +31,4 @@
 /Users/rossritchie/code/TransactionApi/obj/Debug/net8.0/TransactionApi.pdb
 /Users/rossritchie/code/TransactionApi/obj/Debug/net8.0/TransactionApi.genruntimeconfig.cache
 /Users/rossritchie/code/TransactionApi/obj/Debug/net8.0/ref/TransactionApi.dll
+/Users/rossritchie/code/TransactionApi/obj/Debug/net8.0/TransactionApi.sourcelink.json
