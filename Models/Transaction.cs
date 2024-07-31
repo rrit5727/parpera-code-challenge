@@ -16,6 +16,6 @@ namespace TransactionApi.Models
     public decimal Amount {get; set; }
 
     [Required]
-    public string Status {get; set; } = string.empty
+    public string Status {get; set; } = string.empty;
   }
 }
