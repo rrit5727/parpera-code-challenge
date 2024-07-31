@@ -25,7 +25,7 @@ namespace TransactionApi.Controllers
     [HttpPut("{id}/status")]
     public async Task<IActionResult> UpdateTransactionStatus(int id, [FromBody] string newStatus)
     {
-      var Transaction = await _service.UpdateTransactionStatusAsync(id, newStatus);
+      var transaction = await _service.UpdateTransactionStatusAsync(id, newStatus);
       if (transaction == null)
       {
         return NotFound();

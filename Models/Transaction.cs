@@ -10,12 +10,12 @@ namespace TransactionApi.Models
     public DateTime DateTime {get; set; }
 
     [Required]
-    public string Description {get; set; } = string.empty;
+    public string Description {get; set; } = string.Empty;
 
     [Required]
     public decimal Amount {get; set; }
 
     [Required]
-    public string Status {get; set; } = string.empty;
+    public string Status {get; set; } = string.Empty;
   }
 }
