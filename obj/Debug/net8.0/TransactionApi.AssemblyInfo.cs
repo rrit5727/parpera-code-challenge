@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TransactionApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+51bfc8e8b3ab49bcfdac9320d02941b123ae271a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+48a086ee36b120c835668578f714bca670ef5bae")]
 [assembly: System.Reflection.AssemblyProductAttribute("TransactionApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TransactionApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
