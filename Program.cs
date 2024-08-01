@@ -25,6 +25,9 @@ builder.Services.AddScoped<ITransactionService, TransactionService>();
 
 var app = builder.Build();
 
+
+
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
