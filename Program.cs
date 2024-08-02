@@ -8,10 +8,11 @@ using TransactionApi.Data;
 using TransactionApi.Repositories;
 using TransactionApi.Services;
 using TransactionApi;
+using TransactionApi.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container
+// Services
 builder.Services.AddControllers();
 builder.Services.AddAuthorization();
 builder.Services.AddEndpointsApiExplorer();
@@ -55,11 +56,14 @@ else
 
 app.UseHttpsRedirection();
 app.UseRouting();
+
+app.UseMiddleware<TokenAuthMiddleware>(); // ensure token is checked before standard authorization is applied
+
 app.UseAuthorization();
 
 app.MapControllers(); // Map controllers
 
-// Add a simple default route
+// simple default route
 app.MapGet("/", () => "Welcome to the Transaction API!");
 
 app.Run();
