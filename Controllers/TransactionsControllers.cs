@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using TransactionApi.Models;
 using TransactionApi.Services;
+using Microsoft.AspNetCore.Authorization;
 
 namespace TransactionApi.Controllers
 {
@@ -22,6 +23,7 @@ namespace TransactionApi.Controllers
       return Ok(transactions);
     }
 
+    [Authorize]
     [HttpPut("{id}/status")]
     public async Task<IActionResult> UpdateTransactionStatus(int id, [FromBody] string newStatus)
     {

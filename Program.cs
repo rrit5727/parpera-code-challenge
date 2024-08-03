@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -9,12 +10,25 @@ using TransactionApi.Repositories;
 using TransactionApi.Services;
 using TransactionApi;
 using TransactionApi.Middleware;
+using TransactionApi.Authentication;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Configure Kestrel server options
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.ConfigureHttpsDefaults(httpsOptions =>
+    {
+        httpsOptions.SslProtocols = System.Security.Authentication.SslProtocols.Tls12 | System.Security.Authentication.SslProtocols.Tls13;
+    });
+});
+
 
 // Services
 builder.Services.AddControllers();
 builder.Services.AddAuthorization();
+builder.Services.AddAuthentication("Bearer") //
+    .AddScheme<AuthenticationSchemeOptions, CustomAuthHandler>("Bearer", options => { });
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -59,6 +73,7 @@ app.UseRouting();
 
 app.UseMiddleware<TokenAuthMiddleware>(); // ensure token is checked before standard authorization is applied
 
+app.UseAuthentication(); 
 app.UseAuthorization();
 
 app.MapControllers(); // Map controllers
