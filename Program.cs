@@ -9,7 +9,6 @@ using TransactionApi.Data;
 using TransactionApi.Repositories;
 using TransactionApi.Services;
 using TransactionApi;
-using TransactionApi.Middleware;
 using TransactionApi.Authentication;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -71,7 +70,6 @@ else
 app.UseHttpsRedirection();
 app.UseRouting();
 
-app.UseMiddleware<TokenAuthMiddleware>(); // ensure token is checked before standard authorization is applied
 
 app.UseAuthentication(); 
 app.UseAuthorization();
