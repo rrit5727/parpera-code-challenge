@@ -33,7 +33,7 @@ builder.Services.AddSwaggerGen();
 
 // Configure Entity Framework Core to use In-Memory database
 builder.Services.AddDbContext<TransactionContext>(options =>
-    options.UseInMemoryDatabase("TransactionDb"));
+    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Register repository and service
 builder.Services.AddScoped<ITransactionRepository, TransactionRepository>();
