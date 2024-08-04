@@ -2,7 +2,9 @@
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransactionApi.Tests", "TransactionApi.Tests/TransactionApi.Tests.csproj", "{22884578-CCA6-4F64-903C-A25A224FF694}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransactionApi.Tests", "TransactionApi.Tests\TransactionApi.Tests.csproj", "{22884578-CCA6-4F64-903C-A25A224FF694}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransactionApi", "TransactionApi.csproj", "{B61B5BFE-2015-406B-A535-AEEBC886FFD0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,5 +19,9 @@ Global
 		{22884578-CCA6-4F64-903C-A25A224FF694}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22884578-CCA6-4F64-903C-A25A224FF694}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22884578-CCA6-4F64-903C-A25A224FF694}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B61B5BFE-2015-406B-A535-AEEBC886FFD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B61B5BFE-2015-406B-A535-AEEBC886FFD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B61B5BFE-2015-406B-A535-AEEBC886FFD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B61B5BFE-2015-406B-A535-AEEBC886FFD0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

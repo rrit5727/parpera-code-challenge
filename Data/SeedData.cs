@@ -8,11 +8,11 @@ namespace TransactionApi
     {
         public static void Initialize(TransactionContext context)
         {
-            if (context.Transactions.Any())
-            {
-                return; // DB has been seeded
-            }
+            // Clear existing data
+            context.Transactions.RemoveRange(context.Transactions);
+            context.SaveChanges();
 
+            // Seed new data
             context.Transactions.AddRange(
                 new Transaction
                 {
