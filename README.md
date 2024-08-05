@@ -29,6 +29,16 @@ The API will be available at 'https://localhost:5183'
 - GET '/api/transactions' - Retrieve all transactions
 - PUT '/api/transactions/{id}/status' - Update a transaction's status (requires authentication)
 
+## Accessing the endpoints
+
+Use the following curl commands to access the endpoints:
+
+Get: 
+- curl http://localhost:5183/api/transactions
+
+Put:
+- curl -X PUT -H "Content-Type: application/json" -H "Authorization: Bearer secret-token" -d '"Status"' http://localhost:5183/api/transactions/Id/status
+
 ## Authentication 
 
 To update a transaction's status, include the following header in your request: "Authorization: Bearer secret-token"
@@ -40,3 +50,4 @@ To update a transaction's status, include the following header in your request: 
 
 ## Caveats
 There is a problem with duplicate attributes due to those automatically generated on build. To address this, run 'rm -rf bin obj' and remove any other 'bin/obj' folders (i.e. in the test folder) before either running 'dotnet run', 'dotnet build' or 'dotnet test'. Apologies - I haven't been able to resolve this as at the time of submission
+
