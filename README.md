@@ -38,3 +38,5 @@ To update a transaction's status, include the following header in your request: 
 - Microsoft.EntityFrameworkCore.Sqlite
 - Microsoft.EntityFrameworkCore.InMemory (for testing)
 
+## Caveats
+There is a problem with duplicate attributes due to those automatically generated on build. To address this, run 'rm -rf bin obj' and remove any other 'bin/obj' folders (i.e. in the test folder) before either running 'dotnet run', 'dotnet build' or 'dotnet test'. Apologies - I haven't been able to resolve this as at the time of submission
